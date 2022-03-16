@@ -1,7 +1,21 @@
-### What it is
+## pytest capture Warnings
 
-- Pytest plugin which writes all the warnings inside a txt file on a flake8 format which can be consumed by jenkins
+This is a pytest plugin to collect and print a summary of all the warnings encountered during test execution and save them in a file.
 
-### How to use it
 
-- write a test then run it
+# Installation
+
+    pip install pytest-capture-warnings
+
+# Usage 
+
+    pytest --output <output_file> <file_to_test>
+    or
+    CAPTURE_WARNINGS_OUTPUT=<output_file> pytest <files_to_test>
+
+
+# Flake8 Format
+    
+The output file is formatted on a flake8 format
+    
+    <filename/path>:<line number>:<character number>:<warning message>
